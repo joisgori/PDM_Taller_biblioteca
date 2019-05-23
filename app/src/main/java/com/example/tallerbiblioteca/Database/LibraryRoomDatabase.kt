@@ -5,11 +5,11 @@ import androidx.room.RoomDatabase
 import com.example.tallerbiblioteca.Database.DAOs.AuthorDAO
 import com.example.tallerbiblioteca.Database.DAOs.BookDAO
 import com.example.tallerbiblioteca.Database.DAOs.TagDAO
-import com.example.tallerbiblioteca.Database.Entities.Author
-import com.example.tallerbiblioteca.Database.Entities.Book
-import com.example.tallerbiblioteca.Database.Entities.Tag
+import com.example.tallerbiblioteca.Database.Entities.AuthorEntity
+import com.example.tallerbiblioteca.Database.Entities.BookEntity
+import com.example.tallerbiblioteca.Database.Entities.TagEntity
 
-@Database(entities = [Book::class, Author::class, Tag::class], version = 1, exportSchema = false)
+@Database(entities = [BookEntity::class, AuthorEntity::class, TagEntity::class], version = 1, exportSchema = false)
 public abstract class LibraryRoomDatabase: RoomDatabase() {
 
     //Aqui se puede ver como se hacen las relaciones entre tablas.
