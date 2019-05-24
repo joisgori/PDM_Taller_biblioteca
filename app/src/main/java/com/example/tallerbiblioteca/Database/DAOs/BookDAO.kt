@@ -8,13 +8,13 @@ import com.example.tallerbiblioteca.Database.Entities.BookEntity
 interface BookDAO {
     //TODO implementar los metodos de manejo de base de datos para BookEntity
 
-    @Query("SELECT * FROM " + BookEntity.TABLE_NAME + " ORDER BY book_Title, book_Author")
+    @Query("SELECT * FROM " + BookEntity.TABLE_NAME)
     fun getAllBooks(): List<BookEntity>
 
     @Insert
     fun insert(book: BookEntity)
 
-    @Query("SELECT * FROM " + BookEntity.TABLE_NAME + "WHERE book_Isb=:isbn")
+    @Query("SELECT * FROM " + BookEntity.TABLE_NAME + "WHERE book_Isbn=:isbn")
     fun search(isbn: String): BookEntity
 
 

@@ -16,7 +16,7 @@ interface AuthorDAO {
     @Query("SELECT * FROM " + BookEntity.TABLE_NAME + "WHERE first_Name=:name")
     fun search(name: String):AuthorEntity
 
-    @Query("SELECT * FROM " + BookEntity.TABLE_NAME + "WHERE first_Name=:name")
+    //@Query("SELECT * FROM " + BookEntity.TABLE_NAME + "WHERE first_Name=:name")
     //fun getAllBooksFromAuthor(name: AuthorEntity):List<BookEntity>
 }
 
